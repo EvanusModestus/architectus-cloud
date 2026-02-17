@@ -11,19 +11,19 @@ Multi-cloud architecture, identity federation, and hybrid connectivity.
 |===
 |Domain |Coverage
 
-|**xref:azure/index.adoc[Azure]**
+|**Azure**
 |Entra ID, VNets, AKS, Key Vault, Functions
 
-|**xref:aws/index.adoc[AWS]**
+|**AWS**
 |IAM, VPC, EKS, Secrets Manager, Lambda
 
-|**xref:oci/index.adoc[Oracle Cloud]**
+|**Oracle Cloud**
 |Identity Domains, networking, OKE
 
-|**xref:multi-cloud/index.adoc[Multi-Cloud]**
+|**Multi-Cloud**
 |Identity federation, cross-cloud networking
 
-|**xref:hybrid/index.adoc[Hybrid]**
+|**Hybrid**
 |ExpressRoute, Direct Connect, site-to-site VPN
 |===
 
@@ -91,6 +91,6 @@ Multi-cloud architecture, identity federation, and hybrid connectivity.
 
 == Related
 
-* xref:security::iam/azure-ad.adoc[Entra ID Deep Dive]
-* xref:automation::iac/terraform.adoc[Terraform]
-* xref:networking::index.adoc[Networking Fundamentals]
+* xref:security::index.adoc[Security] — Identity and access management
+* xref:automation::index.adoc[Automation] — Infrastructure as code
+* xref:networking::index.adoc[Networking] — Network fundamentals
