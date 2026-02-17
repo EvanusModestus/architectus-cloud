@@ -1,0 +1,34 @@
+name: cloud
+title: Cloud
+version: '2026'
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    doc-id: ARCHITECTUS-CLOUD
+    revdate: '2026-02-17'
+    author: Architectus
+    icons: font
+    source-highlighter: highlight.js
+    experimental: ''
+    page-pagination: true
+
+    # Providers
+    cloud-azure: Microsoft Azure
+    cloud-aws: Amazon Web Services
+    cloud-gcp: Google Cloud Platform
+    cloud-oci: Oracle Cloud Infrastructure
+
+    # Azure services
+    azure-entra: Entra ID (Azure AD)
+    azure-vnet: Azure Virtual Network
+    azure-aks: Azure Kubernetes Service
+    azure-keyvault: Azure Key Vault
+
+    # AWS services
+    aws-iam: AWS IAM
+    aws-vpc: Amazon VPC
+    aws-eks: Amazon EKS
+    aws-secrets: AWS Secrets Manager

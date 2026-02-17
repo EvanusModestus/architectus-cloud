@@ -1,0 +1,96 @@
+= Cloud
+:description: Multi-cloud architecture - Azure, AWS, OCI, hybrid
+:navtitle: Cloud
+
+[.lead]
+Multi-cloud architecture, identity federation, and hybrid connectivity.
+
+== Core Competencies
+
+[cols="1,2"]
+|===
+|Domain |Coverage
+
+|**xref:azure/index.adoc[Azure]**
+|Entra ID, VNets, AKS, Key Vault, Functions
+
+|**xref:aws/index.adoc[AWS]**
+|IAM, VPC, EKS, Secrets Manager, Lambda
+
+|**xref:oci/index.adoc[Oracle Cloud]**
+|Identity Domains, networking, OKE
+
+|**xref:multi-cloud/index.adoc[Multi-Cloud]**
+|Identity federation, cross-cloud networking
+
+|**xref:hybrid/index.adoc[Hybrid]**
+|ExpressRoute, Direct Connect, site-to-site VPN
+|===
+
+== Cloud Strategy
+
+[arabic]
+. **Workload placement** — right cloud for right workload
+. **Identity federation** — single identity across clouds
+. **Network connectivity** — secure, low-latency connections
+. **Cost optimization** — reserved instances, spot, autoscaling
+. **Security posture** — consistent policies across clouds
+
+== Provider Comparison
+
+[cols="1,1,1,1"]
+|===
+|Capability |{cloud-azure} |{cloud-aws} |{cloud-oci}
+
+|Identity
+|Entra ID
+|IAM + Identity Center
+|Identity Domains
+
+|Kubernetes
+|AKS
+|EKS
+|OKE
+
+|Secrets
+|Key Vault
+|Secrets Manager
+|Vault
+
+|Serverless
+|Functions
+|Lambda
+|Functions
+
+|VPN
+|VPN Gateway
+|Site-to-Site VPN
+|VPN Connect
+|===
+
+== Hybrid Architecture
+
+[source]
+----
+┌─────────────────────────────────────────────────────────────────┐
+│                         On-Premises                              │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐                     │
+│  │   AD    │    │ Servers │    │ Network │                     │
+│  └────┬────┘    └────┬────┘    └────┬────┘                     │
+│       └──────────────┴──────────────┘                          │
+│                      │                                          │
+└──────────────────────┼──────────────────────────────────────────┘
+                       │ ExpressRoute / Direct Connect / VPN
+┌──────────────────────┼──────────────────────────────────────────┐
+│                      │                Cloud                     │
+│  ┌─────────┐    ┌────▼────┐    ┌─────────┐                     │
+│  │ Entra   │◄──►│  VNet   │◄──►│  AKS    │                     │
+│  └─────────┘    └─────────┘    └─────────┘                     │
+└─────────────────────────────────────────────────────────────────┘
+----
+
+== Related
+
+* xref:security::iam/azure-ad.adoc[Entra ID Deep Dive]
+* xref:automation::iac/terraform.adoc[Terraform]
+* xref:networking::index.adoc[Networking Fundamentals]
